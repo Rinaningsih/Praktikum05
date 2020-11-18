@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+</head>
+
+    <style>
+        body{
+            background-color: salmon;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 18px;
+        }
+
+        input{
+            background-color: lavender;
+            width: 40%;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 15px;
+            margin: 15px;
+            padding: 40px;
+        }
+        button{
+            background-color: grey;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 15px;
+            padding: 10px;
+        }
+    </style>
+<body>
+    <main>
+        <div class="chat">
+        </div>
+
+    <div>
+        
+        <input type="text" class="input-chat" placeholder="Tulis pesan disini...">
+        <button class="btn-chat">Kirim</button>
+        
+    </div>
+    </main>
+
+    <script>
+        let chat = document.querySelector(".chat");
+        const inputChat = document.querySelector(".input-chat");
+        const btnChat = document.querySelector(".btn-chat");
+
+        btnChat.addEventListener("click" , function(){
+            chat.innerHTML = chat.innerHTML + "<br/>" + inputChat.value;
+            inputChat.value = "";
+        })
+    </script>
+</body>
+</html>
